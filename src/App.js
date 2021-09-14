@@ -55,9 +55,10 @@ function App() {
   }
 
   useEffect(() => {
-    randomize();
+    const number = Math.floor(Math.random() * metropoles.length);
+    setSearchingFor(metropoles[number]);
     setLoading(false);
-  }, [randomize]);
+  }, []);
 
   return (
     !loading && (
