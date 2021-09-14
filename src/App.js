@@ -82,7 +82,7 @@ function App() {
 
   useEffect(() => {
     console.log(localStorage.getItem("showVilles"));
-    setShowVilles(localStorage.getItem("showVilles") == "true" ? true : false);
+    setShowVilles(localStorage.getItem("showVilles") === "true" ? true : false);
     randomize();
     setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
