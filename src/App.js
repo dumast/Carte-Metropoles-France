@@ -57,7 +57,7 @@ function App() {
   useEffect(() => {
     randomize();
     setLoading(false);
-  }, []);
+  }, [randomize]);
 
   return (
     !loading && (
