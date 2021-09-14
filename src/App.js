@@ -41,7 +41,7 @@ function App() {
 
   function checkNumber(metropole) {
     if (metropole === searchingFor) {
-      setMessage("Correcte !");
+      setMessage("Correct !");
       setTimeout(() => {
         setMessage();
       }, 1000);
@@ -66,7 +66,7 @@ function App() {
         <div className="request">
           <h1>Trouvez {searchingFor}</h1>
           {message ? (
-            <h1 style={{ color: message === "Correcte !" ? "green" : "red" }}>
+            <h1 style={{ color: message === "Correct !" ? "green" : "red" }}>
               {message}
             </h1>
           ) : (
