@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+.container {
+  width: 600px;
+  height: 600px;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container > svg {
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container > div {
+  position: absolute;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  transition: 100ms;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container > div:hover {
+  background-color: rgb(226, 19, 19);
+  transform: scale(1.20);
+}
+
+#Lille {
+  top: 25px;
+  left: 322px;
+}
+
+#Rouen {
+  top: 100px;
+  left: 220px;
+}
+#Paris {
+  top: 150px;
+  left: 300px;
+}
+#Metz {
+  top: 120px;
+  left: 445px;
+}
+#Nancy {
+  top: 155px;
+  left: 420px;
+}
+#Strasbourg {
+  top: 155px;
+  left: 510px;
+}
+#Brest {
+  top: 162px;
+  left: 10px;
+}
+#Rennes {
+  top: 190px;
+  left: 130px;
+}
+#Orleans {
+  top: 200px;
+  left: 260px;
+}
+#Nantes {
+  top: 240px;
+  left: 130px;
+}
+#Tours {
+  top: 240px;
+  left: 200px;
+}
+#Dijon {
+  top: 240px;
+  left: 410px;
+}
+#Clermont-Ferrand {
+  top: 330px;
+  left: 310px;
+}
+#Lyon {
+  top: 350px;
+  left: 400px;
+}
+#Bordeaux {
+  top: 370px;
+  left: 170px;
+}
+#Saint-Etienne {
+  top: 360px;
+  left: 380px;
+}
+#Grenoble {
+  top: 375px;
+  left: 440px;
+}
+#Toulouse {
+  top: 460px;
+  left: 230px;
+}
+#Montpellier {
+  top: 450px;
+  left: 360px;
+}
+#Marseille {
+  top: 465px;
+  left: 425px;
+}
+#Toulon {
+  top: 475px;
+  left: 450px;
+}
+#Nice {
+  top: 440px;
+  left: 490px;
+}
+
+.request{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 600px;
+  justify-content: space-between;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
