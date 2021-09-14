@@ -57,7 +57,7 @@ function App() {
   useEffect(() => {
     randomize();
     setLoading(false);
-    // eslint-disable-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
