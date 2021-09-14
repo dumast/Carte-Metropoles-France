@@ -33,7 +33,7 @@ function App() {
     "Metropole Rouen Normandie",
     "Metropole du Grand Paris",
     "Metz Metropole",
-    "Metropole du Grand_Nancy",
+    "Metropole du Grand Nancy",
     "Eurometropole de Strasbourg",
     "Brest Metropole",
     "Rennes Metropole",
