@@ -71,7 +71,7 @@ function App() {
     if (metropole === searchingFor) {
       setMessage("Correct !");
       div.style = "background-color: green;";
-      setScore(score+1)
+      setScore(score + 1);
       setTimeout(() => {
         setMessage();
         div.style = "background-color: white;";
@@ -80,7 +80,7 @@ function App() {
     } else {
       setMessage("Faux !");
       div.style = "background-color: red;";
-      setScore(score-1)
+      setScore(score - 1);
       setTimeout(() => {
         setMessage();
         div.style = "background-color: white;";
@@ -126,6 +126,10 @@ function App() {
               <div id={metropole} onClick={() => checkNumber(metropole)} />
             );
           })}
+        </div>
+        <div style={{ color: "gray" }}>
+          <p>Copyright 2021 &#169; Terence Dumas</p>
+          <a href="https://github.com/dumast">Github</a>
         </div>
       </>
     )
