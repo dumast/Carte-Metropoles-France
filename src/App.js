@@ -58,7 +58,7 @@ function App() {
     const number = Math.floor(Math.random() * metropoles.length);
     setSearchingFor(metropoles[number]);
     setLoading(false);
-  }, []);
+  }, [metropoles]);
 
   return (
     !loading && (
