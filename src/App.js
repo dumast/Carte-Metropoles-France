@@ -55,10 +55,10 @@ function App() {
   }
 
   useEffect(() => {
-    const number = Math.floor(Math.random() * metropoles.length);
-    setSearchingFor(metropoles[number]);
+    randomize();
     setLoading(false);
-  }, [metropoles]);
+    // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     !loading && (
