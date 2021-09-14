@@ -28,15 +28,41 @@ function App() {
     "Nice",
   ];
 
+  const metropoles2 = [
+    "Metropole Europeenne_de_Lille",
+    "Metropole Rouen Normandie",
+    "Metropole du Grand Paris",
+    "Metz Metropole",
+    "Metropole du Grand_Nancy",
+    "Eurometropole de Strasbourg",
+    "Brest Metropole",
+    "Rennes Metropole",
+    "Orleans Metropole",
+    "Nantes Metropole",
+    "Tours Metropole Val de Loire",
+    "Dijon Metropole",
+    "Clermont Auvergne Metropole",
+    "Metropole de Lyon",
+    "Bordeaux Metropole",
+    "Saint-Etienne Metropole",
+    "Grenoble-Alpes-Metropole",
+    "Toulouse Metropole",
+    "Montpellier-Mediterranee Metropole",
+    "Metropole d'Aix-Marseille-Provence",
+    "Metropole Toulon-Provence-Mediterranee",
+    "Metropole Nice Cote d'Azur",
+  ];
+
   const [searchingFor, setSearchingFor] = useState();
-
+  const [searchingFor2, setSearchingFor2] = useState();
   const [loading, setLoading] = useState(true);
-
   const [message, setMessage] = useState();
+  const [showVilles, setShowVilles] = useState();
 
   function randomize() {
     const number = Math.floor(Math.random() * metropoles.length);
     setSearchingFor(metropoles[number]);
+    setSearchingFor2(metropoles2[number]);
   }
 
   function checkNumber(metropole) {
@@ -55,6 +81,8 @@ function App() {
   }
 
   useEffect(() => {
+    console.log(localStorage.getItem("showVilles"));
+    setShowVilles(localStorage.getItem("showVilles") == "true" ? true : false);
     randomize();
     setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -63,8 +91,17 @@ function App() {
   return (
     !loading && (
       <>
+        <button
+          className="button"
+          onClick={() => {
+            setShowVilles(!showVilles);
+            localStorage.setItem("showVilles", !showVilles);
+          }}
+        >
+          Afficher les {showVilles ? "metropoles" : "villes"}
+        </button>
         <div className="request">
-          <h1>Trouvez {searchingFor}</h1>
+          <h1>Trouvez {showVilles ? searchingFor : searchingFor2}</h1>
           {message ? (
             <h1 style={{ color: message === "Correct !" ? "green" : "red" }}>
               {message}

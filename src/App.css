@@ -114,8 +114,17 @@
 }
 
 .request{
-  display: flex;
+  display: grid;
   width: 600px;
-  justify-content: space-between;
+  height: 150px;
+  grid-template-columns: 70% 30%;
   color: white;
+}
+
+.button {
+  background-color: rgb(219, 219, 219);
+  width: 160px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
 }
