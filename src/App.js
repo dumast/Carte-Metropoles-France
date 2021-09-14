@@ -29,7 +29,7 @@ function App() {
   ];
 
   const metropoles2 = [
-    "Metropole Europeenne_de_Lille",
+    "Metropole Europeenne de Lille",
     "Metropole Rouen Normandie",
     "Metropole du Grand Paris",
     "Metz Metropole",
@@ -53,6 +53,7 @@ function App() {
     "Metropole Nice Cote d'Azur",
   ];
 
+  const [score, setScore] = useState(0);
   const [searchingFor, setSearchingFor] = useState();
   const [searchingFor2, setSearchingFor2] = useState();
   const [loading, setLoading] = useState(true);
@@ -66,16 +67,23 @@ function App() {
   }
 
   function checkNumber(metropole) {
+    const div = document.getElementById(metropole);
     if (metropole === searchingFor) {
       setMessage("Correct !");
+      div.style = "background-color: green;";
+      setScore(score+1)
       setTimeout(() => {
         setMessage();
+        div.style = "background-color: white;";
       }, 1000);
       randomize();
     } else {
       setMessage("Faux !");
+      div.style = "background-color: red;";
+      setScore(score-1)
       setTimeout(() => {
         setMessage();
+        div.style = "background-color: white;";
       }, 1000);
     }
   }
@@ -100,6 +108,7 @@ function App() {
         >
           Afficher les {showVilles ? "metropoles" : "villes"}
         </button>
+        <span>Score: {score}</span>
         <div className="request">
           <h1>Trouvez {showVilles ? searchingFor : searchingFor2}</h1>
           {message ? (
@@ -111,7 +120,7 @@ function App() {
           )}
         </div>
         <div className="container">
-          <France fill="green" className="carte"></France>
+          <France fill="lightblue" className="carte"></France>
           {metropoles.map((metropole) => {
             return (
               <div id={metropole} onClick={() => checkNumber(metropole)} />
